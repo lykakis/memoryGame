@@ -1,0 +1,125 @@
+ <script language="javascript">
+
+
+      var changed=0;
+      var opened=[];
+      var ids=[];
+      //Count correct changes
+      var counter=0;
+
+      //Returns an 24 length array with random numbers from 0 to 23
+      function sufle(){
+        var a = [];
+          for(var k=0;k<24;k++){
+            a[k]=k;
+          }
+        var j, x, i;
+          for (i = a.length - 1; i > 0; i--) {
+              j = Math.floor(Math.random() * (i + 1));
+              x = a[i];
+              a[i] = a[j];
+              a[j] = x;
+          }
+          return a;
+      }
+      var randomArray = sufle();
+
+      //Functions that make enable and disable to click the images.
+      function disable(){
+          for(var i=0;i<24;i++){
+        document.getElementById(i).classList.add('disabled');
+          }
+      }
+      function enable(){
+          for(var i=0;i<24;i++){
+        document.getElementById(i).classList.remove('disabled');
+          }
+      }
+
+
+        //A function that suffle the array which holds the cards for a new game
+        //Turns back the cards
+        //Empty the temporary arrays and the counter
+        function newStart(){
+            randomArray = sufle();
+            for(var i=0; i<24;i++){
+                document.getElementById(i).src ="images/back.jpg" ;
+            }
+            ids = [];
+            opened = [];
+            counter=0;
+        }
+
+        //Function that opens, and checks similar images.
+        function open(currentId){
+            opened.push(randomArray[currentId]);
+            ids.push(currentId);
+            document.getElementById(currentId).src ="images/puppy"+randomArray[currentId]+".jpg" ;
+
+            if(opened.length==2){
+                if(randomArray[currentId]<12){
+                        if(randomArray[currentId]+12==opened[0]){
+                            //    randomArray[currentId] = null;
+                                ids = [];
+                                opened = [];
+                                counter++;
+
+                                if(counter==12){
+                                    if (confirm('Congratulations !! Start a new game?')) {
+                                            newStart();
+                                            } else {
+                                                // Do nothing!
+                                            }
+                                        }
+                        }else {
+                            disable();
+
+                             setTimeout(function(){
+
+                                document.getElementById(ids[0]).src ="images/back.jpg" ;
+                                document.getElementById(ids[1]).src ="images/back.jpg" ;
+                                enable();
+                                ids = [];
+                                opened = [];
+                                },1100);
+
+                        }
+                }else{
+                    if(randomArray[currentId]-12==opened[0]){
+                        //randomArray[currentId] = null;
+                        ids = [];
+                        opened = [];
+                        counter++;
+                        if(counter==12){
+                            if (confirm('Congratulations !! Start a new game?')) {
+                                    newStart();
+                                    } else {
+                                        // Do nothing!
+                                    }
+                                }
+                    }else {
+                        disable();
+
+                         setTimeout(function(){
+
+                            document.getElementById(ids[0]).src ="images/back.jpg" ;
+                            document.getElementById(ids[1]).src ="images/back.jpg" ;
+                            enable();
+                            ids = [];
+                            opened = [];
+                            },1100);
+                    }
+                }
+            }
+        }
+
+        //Insert eventListener in every image.
+        for (var i = 0; i < 24; i++){
+        (function (i) {
+       document.getElementById(i).addEventListener("click",function() {open(i); });
+      }(i));
+      }
+
+
+
+      </script>
