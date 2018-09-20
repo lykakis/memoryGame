@@ -4,64 +4,108 @@
   <title> Puppy Memory Game </title>
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="css/cool.css">
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div class="container">
+<div class="container RedBox" >
 
-    <div class="center">
-        <h1 class="border" align="center">
-            Puppy Memory Game<br>  <button id="btn" type="button" onclick="newStart()"> New Start   </button>
-        </h1>
+        <h2 class="border" align="center">
+          <br>  <button id="btn" type="button" onclick="newStart()"> New Start   </button>
+        </h2>
 
-          <div class="mainBox  border" >
-                <div class="row">
-                  <div class="column">
-                    <div class="card"><img id="0" src="images/back.jpg" height="180" width="130"></div>
-                    <div class="card"><img id="1" src="images/back.jpg" height="180" width="130"></div>
-                    <div class="card"><img id="2" src="images/back.jpg" height="180" width="130"></div>
-                    <div class="card"><img id="3" src="images/back.jpg" height="180" width="130"></div>
-                  </div>
-                  <div class="column">
+
+          <div class="row ">
+                   <div class="col-xs-5 col-sm-4 col-md-2 col-lg-2 top-buffer" >
+                  <div class="card"><img id="0" src="images/back.jpg" height="180" width="130"></div>
+                   </div>
+                   <div class="col-xs-5 col-sm-4 col-md-2 col-lg-2 top-buffer" >
+                   <div class="card"><img id="1" src="images/back.jpg" height="180" width="130"></div>
+                   </div>
+                   <div class="col-xs-5 col-sm-4 col-md-2 col-lg-2 top-buffer" >
+                   <div class="card"><img id="2" src="images/back.jpg" height="180" width="130"></div>
+                   </div>
+                   <div class="col-xs-5 col-sm-4 col-md-2 col-lg-2 top-buffer" >
+                   <div class="card"><img id="3" src="images/back.jpg" height="180" width="130"></div>
+                   </div>
+                   <div class="col-xs-5 col-sm-4 col-md-2 col-lg-2 top-buffer" >
                     <div class="card"><img id="4" src="images/back.jpg" height="180" width="130"></div>
+                    </div>
+                    <div class="col-xs-5 col-sm-4 col-md-2 col-lg-2 top-buffer" >
                     <div class="card"><img id="5" src="images/back.jpg" height="180" width="130"></div>
+                    </div>
+         </div>
+        <div class="row ">
+                    <div class="col-xs-5 col-sm-4 col-md-2 col-lg-2 top-buffer" >
                     <div class="card"><img id="6" src="images/back.jpg" height="180" width="130"></div>
+                    </div>
+                    <div class="col-xs-5 col-sm-4 col-md-2 col-lg-2 top-buffer" >
                     <div class="card"><img id="7" src="images/back.jpg" height="180" width="130"></div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="column">
+                    </div>
+                    <div class="col-xs-5 col-sm-4 col-md-2 col-lg-2 top-buffer" >
                     <div class="card"><img id="8" src="images/back.jpg" height="180" width="130"></div>
+                    </div>
+                    <div class="col-xs-5 col-sm-4 col-md-2 col-lg-2 top-buffer" >
                     <div class="card"><img id="9" src="images/back.jpg" height="180" width="130"></div>
+                    </div>
+                    <div class="col-xs-5 col-sm-4 col-md-2 col-lg-2 top-buffer" >
                     <div class="card"><img id="10" src="images/back.jpg" height="180" width="130"></div>
+                    </div>
+                    <div class="col-xs-5 col-sm-4 col-md-2 col-lg-2 top-buffer" >
                     <div class="card"><img id="11" src="images/back.jpg" height="180" width="130"></div>
-                  </div>
-                  <div class="column">
-                    <div class="card"><img id="12" src="images/back.jpg" height="180" width="130"></div>
-                    <div class="card"><img id="13" src="images/back.jpg" height="180" width="130"></div>
-                    <div class="card"><img id="14" src="images/back.jpg" height="180" width="130"></div>
-                    <div class="card"><img id="15" src="images/back.jpg" height="180" width="130"></div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="column">
-                    <div class="card"><img id="16" src="images/back.jpg" height="180" width="130"></div>
-                    <div class="card"><img id="17" src="images/back.jpg" height="180" width="130"></div>
-                    <div class="card"><img id="18" src="images/back.jpg" height="180" width="130"></div>
-                    <div class="card"><img id="19" src="images/back.jpg" height="180" width="130"></div>
-                  </div>
-                  <div class="column">
-                    <div class="card"><img id="20" src="images/back.jpg" height="180" width="130"></div>
-                    <div class="card"><img id="21" src="images/back.jpg" height="180" width="130"></div>
-                    <div class="card"><img id="22" src="images/back.jpg" height="180" width="130"></div>
-                    <div class="card"><img id="23" src="images/back.jpg" height="180" width="130"></div>
-                  </div>
-                </div>
-            </div>
-       </div>
+                    </div>
+        </div>
 
+
+        <div class="row ">
+                    <div class="col-xs-5 col-sm-4 col-md-2 col-lg-2 top-buffer" >
+                    <div class="card"><img id="12" src="images/back.jpg" height="180" width="130"></div>
+                    </div>
+                    <div class="col-xs-5 col-sm-4 col-md-2 col-lg-2 top-buffer" >
+                    <div class="card"><img id="13" src="images/back.jpg" height="180" width="130"></div>
+                    </div>
+                    <div class="col-xs-5 col-sm-4 col-md-2 col-lg-2 top-buffer" >
+                    <div class="card"><img id="14" src="images/back.jpg" height="180" width="130"></div>
+                    </div>
+                    <div class="col-xs-5 col-sm-4 col-md-2 col-lg-2 top-buffer" >
+                    <div class="card"><img id="15" src="images/back.jpg" height="180" width="130"></div>
+                    </div>
+                    <div class="col-xs-5 col-sm-4 col-md-2 col-lg-2 top-buffer" >
+                    <div class="card"><img id="16" src="images/back.jpg" height="180" width="130"></div>
+                    </div>
+                    <div class="col-xs-5 col-sm-4 col-md-2 col-lg-2 top-buffer" >
+                    <div class="card"><img id="17" src="images/back.jpg" height="180" width="130"></div>
+                    </div>
+
+        </div>
+      <div class="row ">
+                    <div class="col-xs-5 col-sm-4 col-md-2 col-lg-2 top-buffer" >
+                    <div class="card"><img id="18" src="images/back.jpg" height="180" width="130"></div>
+                    </div>
+                    <div class="col-xs-5 col-sm-4 col-md-2 col-lg-2 top-buffer" >
+                    <div class="card"><img id="19" src="images/back.jpg" height="180" width="130"></div>
+                    </div>
+                    <div class="col-xs-5 col-sm-4 col-md-2 col-lg-2 top-buffer" >
+                    <div class="card"><img id="20" src="images/back.jpg" height="180" width="130"></div>
+                    </div>
+                    <div class="col-xs-5 col-sm-4 col-md-2 col-lg-2 top-buffer" >
+                    <div class="card"><img id="21" src="images/back.jpg" height="180" width="130"></div>
+                    </div>
+                    <div class="col-xs-5 col-sm-4 col-md-2 col-lg-2 top-buffer" >
+                    <div class="card"><img id="22" src="images/back.jpg" height="180" width="130"></div>
+                    </div>
+                    <div class="col-xs-5 col-sm-4 col-md-2 col-lg-2 top-buffer" >
+                    <div class="card"><img id="23" src="images/back.jpg" height="180" width="130"></div>
+                    </div>
 
       </div>
+
+
+
+</div>
 
       <script language="javascript">
 

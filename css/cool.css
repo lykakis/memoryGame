@@ -1,58 +1,15 @@
-body {
-  margin: auto;
-}
-.center {
-    margin: auto;
-    width: 60%;
-
-}
-.border{
-    border: 3px solid black;
-    padding: 10px 10px 10px 10px;
-}
-.border2{
-    border: 3px solid black;
-    padding: 10px 10px 10px 10px;
-    float: left;
-}
-
-
-.container .left { float: left; }
-.container .center { margin: 0 auto; width: 70%;}
-.container .right { float: right; }
-
-.mainBox{
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-gap: 5px ;
-  background-color: #A52A2A;
-  padding: 5px 5px 5px 5px ;
-}
-
-
-* {
-    box-sizing: border-box;
-}
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    padding:  5px 5px 5px 5px;
-}
-
-.column {
-
-    flex: 10%;
-    padding:  5px 5px 5px 5px ;
-}
-.column img {
-    margin-top: 8px;
-    vertical-align: middle;
-}
-img {
-    max-height: 100%;
+.RedBox{
+  background-color: #ED6F71; /*Light red background*/
 }
 
 .disabled {
-	pointer-events: none;
+	pointer-events: none;  /*Used to make imges unclikable*/
+}
 
+.top-buffer {
+margin-top:20px; /*Space between cards*/
+   }
+
+img {
+border-radius: 15%;  /*cutting corners of images*/
 }
